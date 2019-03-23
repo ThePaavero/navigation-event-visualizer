@@ -1,5 +1,5 @@
 <?php
-$targetDummyPage = isset($_GET['page']) ? (int) $_GET['page'] : 'a';
+$targetDummyPage = isset($_GET['page']) ? $_GET['page'] : 'a';
 $dummyPagesToDummyContent = [
   'a' => 'Page A! Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Neque convallis a cras semper auctor neque vitae. Odio ut sem nulla pharetra diam sit amet. Pulvinar elementum integer enim neque. Et netus et malesuada fames ac turpis egestas. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Non consectetur a erat nam at lectus urna. Ullamcorper a lacus vestibulum sed arcu non. Fames ac turpis egestas maecenas pharetra convallis posuere. Magna eget est lorem ipsum. Etiam tempor orci eu lobortis elementum nibh. Sit amet cursus sit amet dictum sit amet justo. Tristique senectus et netus et malesuada fames. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. In arcu cursus euismod quis viverra nibh.',
   'b' => 'Page B! Enim ut sem viverra aliquet eget sit amet tellus. Purus in mollis nunc sed id semper risus in hendrerit. Elementum curabitur vitae nunc sed. Congue mauris rhoncus aenean vel elit scelerisque. Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Tellus at urna condimentum mattis pellentesque id nibh. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Suscipit tellus mauris a diam maecenas sed enim. Fermentum et sollicitudin ac orci phasellus egestas tellus. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Id leo in vitae turpis massa sed elementum tempus egestas.',
@@ -39,5 +39,6 @@ $text = isset($dummyPagesToDummyContent[$targetDummyPage]) ? $dummyPagesToDummyC
   </ul>
 </nav>
 <div class="content"><?php echo $text ?></div>
+<script src="./../navigation-presentation.js"></script>
 </body>
 </html>
