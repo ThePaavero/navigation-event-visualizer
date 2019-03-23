@@ -1,4 +1,5 @@
 <?php
+sleep(rand(0, 5));
 $targetDummyPage = isset($_GET['page']) ? $_GET['page'] : 'a';
 $dummyPagesToDummyContent = [
   'a' => 'Page A! Tincidunt vitae semper quis lectus nulla at volutpat diam ut. Neque convallis a cras semper auctor neque vitae. Odio ut sem nulla pharetra diam sit amet. Pulvinar elementum integer enim neque. Et netus et malesuada fames ac turpis egestas. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Non consectetur a erat nam at lectus urna. Ullamcorper a lacus vestibulum sed arcu non. Fames ac turpis egestas maecenas pharetra convallis posuere. Magna eget est lorem ipsum. Etiam tempor orci eu lobortis elementum nibh. Sit amet cursus sit amet dictum sit amet justo. Tristique senectus et netus et malesuada fames. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. In arcu cursus euismod quis viverra nibh.',
