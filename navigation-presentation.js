@@ -1,16 +1,15 @@
 (() => {
 
+  // Spinner taken from https://icons8.com/preloaders/en/circular
   const svgSpinnerMarkup = `
-  <?xml version="1.0" standalone="no"?>1
-  <!-- Generator: SVG Circus (http://svgcircus.com) -->
-  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-  <svg id="SVG-Circus-a34a898c-4267-6c74-58aa-b0c217c7a4bd" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><rect id="actor_5" x="76" y="46" width="8" height="8" opacity="1" fill="rgba(106,143,176,1)" fill-opacity="1" stroke="rgba(106,143,176,1)" stroke-width="0" stroke-opacity="1" stroke-dasharray=""></rect><rect id="actor_4" x="60" y="45" width="10" height="10" opacity="1" fill="rgba(106,143,176,1)" fill-opacity="1" stroke="rgba(106,143,176,1)" stroke-width="1" stroke-opacity="1" stroke-dasharray=""></rect><rect id="actor_3" x="45" y="45" width="10" height="10" opacity="1" fill="rgba(106,143,176,1)" fill-opacity="1" stroke="rgba(106,143,176,1)" stroke-width="1" stroke-opacity="1" stroke-dasharray=""></rect><rect id="actor_2" x="30" y="45" width="10" height="10" opacity="1" fill="rgba(106,143,176,1)" fill-opacity="1" stroke="rgba(106,143,176,1)" stroke-width="1" stroke-opacity="1" stroke-dasharray=""></rect><rect id="actor_1" x="15" y="45" width="10" height="10" opacity="1" fill="rgba(106,143,176,1)" fill-opacity="1" stroke="rgba(106,143,176,1)" stroke-width="1" stroke-opacity="1" stroke-dasharray=""></rect><script type="text/ecmascript"><![CDATA[(function(){var actors={};actors.actor_1={node:document.getElementById("SVG-Circus-a34a898c-4267-6c74-58aa-b0c217c7a4bd").getElementById("actor_1"),type:"square",cx:20,cy:50,dx:10,dy:22,opacity:1};actors.actor_2={node:document.getElementById("SVG-Circus-a34a898c-4267-6c74-58aa-b0c217c7a4bd").getElementById("actor_2"),type:"square",cx:35,cy:50,dx:10,dy:22,opacity:1};actors.actor_3={node:document.getElementById("SVG-Circus-a34a898c-4267-6c74-58aa-b0c217c7a4bd").getElementById("actor_3"),type:"square",cx:50,cy:50,dx:10,dy:22,opacity:1};actors.actor_4={node:document.getElementById("SVG-Circus-a34a898c-4267-6c74-58aa-b0c217c7a4bd").getElementById("actor_4"),type:"square",cx:65,cy:50,dx:10,dy:22,opacity:1};actors.actor_5={node:document.getElementById("SVG-Circus-a34a898c-4267-6c74-58aa-b0c217c7a4bd").getElementById("actor_5"),type:"square",cx:80,cy:50,dx:8,dy:22,opacity:1};var tricks={};tricks.trick_1=(function(t,i){i=(function(n){return.5>n?2*n*n:-1+(4-2*n)*n})(i)%1,i=0>i?1+i:i;var _=t.node;0.75>=i?_.setAttribute("opacity",t.opacity-i*(t.opacity/0.75)):i>=0.9?_.setAttribute("opacity",(i-0.9)*(t.opacity/(1-0.9))):_.setAttribute("opacity",0)});var scenarios={};scenarios.scenario_1={actors: ["actor_1","actor_2","actor_3","actor_4","actor_5"],tricks: [{trick: "trick_1",start:0,end:1}],startAfter:0,duration:1400,actorDelay:100,repeat:0,repeatDelay:0};var _reqAnimFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.oRequestAnimationFrame,fnTick=function(t){var r,a,i,e,n,o,s,c,m,f,d,k,w;for(c in actors)actors[c]._tMatrix=[1,0,0,1,0,0];for(s in scenarios)for(o=scenarios[s],m=t-o.startAfter,r=0,a=o.actors.length;a>r;r++){if(i=actors[o.actors[r]],i&&i.node&&i._tMatrix)for(f=0,m>=0&&(d=o.duration+o.repeatDelay,o.repeat>0&&m>d*o.repeat&&(f=1),f+=m%d/o.duration),e=0,n=o.tricks.length;n>e;e++)k=o.tricks[e],w=(f-k.start)*(1/(k.end-k.start)),tricks[k.trick]&&tricks[k.trick](i,Math.max(0,Math.min(1,w)));m-=o.actorDelay}for(c in actors)i=actors[c],i&&i.node&&i._tMatrix&&i.node.setAttribute("transform","matrix("+i._tMatrix.join()+")");_reqAnimFrame(fnTick)};_reqAnimFrame(fnTick);})()]]></script></svg>
-  `
-
-  const config = {
-    changeLinkOpacity: true,
-    preventFurtherClicks: true,
-  }
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="72px" viewBox="0 0 128 143" xml:space="preserve">
+    <path fill="#000000" fill-opacity="1" d="M119.8 31.3l-.6-.6a2.8 2.8 0 0 1-.4.5L116 34a2.8 2.8 0 0 1-4 0v-.2l-1.5 1.5a64 64 0 1 1-48.4-20v-2.6h-.6A3.7 3.7 0 0 1 57.6 9V3.7A3.7 3.7 0 0 1 61.4 0h5.2a3.7 3.7 0 0 1 3.8 3.7V9a3.7 3.7 0 0 1-3.8 3.7H66v2.6a63.8 63.8 0 0 1 42 17.4l1.4-1.5a2.8 2.8 0 0 1 0-4l2.7-2.7a2.8 2.8 0 0 1 .5-.4l-.6-.5a2 2 0 1 1 2.7-2.8l8 8a2 2 0 0 1-3 2.6zM64 19.3a59.7 59.7 0 1 0 60 60 59.8 59.8 0 0 0-60-60zM109.7 80v-1.6h7V80h-7zm-6.5-24.3l6-3.5 1 1.3-6.3 3.5zm-17 63.3l1.3-.8 3.5 6.2-1.3.7zm0-79.7l3.5-6 1.3.6-3.5 6zM64 86a6.7 6.7 0 1 1 6.7-6.8A6.7 6.7 0 0 1 64 86zm0-11.7a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm-.7-47.8h1.5v7h-1.5v-7zm-26.3 98l3.5-6.3 1.3.8-3.5 6zm0-90.6l1.3-.8 3.5 6-1.3 1zm-19 70.8l6-3.5.8 1.3-6 3.5zm0-51.3l.7-1.3 6 3.5-.6 1.3zm.3 26.4h-7v-1.6h7V80zm46.4 51.8h-1.5v-7h1.5v7zm45.4-27l-.7 1.3-6-3.4.6-1.3z"/>
+    <path fill="#000000" fill-opacity="1" d="M64 73.6l-3-.4.8-34 2.2-3.7 2.2 3.7.8 34z">
+    <animateTransform attributeName="transform" type="rotate" from="0 64 79" to="360 64 79" dur="2160ms" repeatCount="indefinite">
+    </animateTransform>
+    </path>
+  </svg>`
 
   const doOverlayElement = () => {
     const div = document.createElement('div')
@@ -37,7 +36,7 @@
       div.style[key] = css[key]
     })
 
-    // div.innerHTML = svgSpinnerMarkup
+    div.innerHTML = svgSpinnerMarkup
 
     div.innerHTML = '<span style="display: block">Loading...</span>'
     document.body.appendChild(div)
@@ -49,23 +48,12 @@
 
   const visualizeLoading = e => {
     doOverlayElement()
-    const link = e.currentTarget
-    if (config.changeLinkOpacity) {
-      link.style.opacity = 0.3
-    }
-    if (config.preventFurtherClicks) {
-      link.addEventListener('click', e => {
-        e.preventDefault()
-      })
-    }
   }
 
 
   const init = () => {
-    const linksWithNavigationEffect = document.querySelectorAll('a, button')
-    Array.from(linksWithNavigationEffect).forEach(link => {
-      link.addEventListener('click', visualizeLoading)
-    })
+    window.addEventListener('popstate', visualizeLoading)
+    window.addEventListener('beforeunload', visualizeLoading)
   }
 
   init()

@@ -30,7 +30,9 @@ $text = isset($dummyPagesToDummyContent[$targetDummyPage]) ? $dummyPagesToDummyC
 </head>
 <body>
 <header>
-  <h2>Demo of indicating when you've clicked a link that navigates to another page.</h2>
+  <h2>
+    <a href="./">Demo of indicating when you've clicked a link that navigates to another page.</a>
+  </h2>
 </header>
 <nav>
   <ul>
