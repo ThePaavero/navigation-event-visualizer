@@ -1,0 +1,1 @@
+Chrome extension for indicating that the browser is busy loading a new URL.

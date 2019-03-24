@@ -1,4 +1,4 @@
-(() => {
+const Extension = function() {
 
   const config = {
     spinnerSize: '70px',
@@ -53,6 +53,17 @@
     window.addEventListener('beforeunload', visualizeLoading)
   }
 
-  init()
+  return {
+    init
+  }
+}
 
-})()
+chrome.extension.sendMessage({}, () => {
+  const readyStateCheckInterval = setInterval(() => {
+    if (document.readyState === 'complete') {
+      clearInterval(readyStateCheckInterval)
+      const app = new Extension()
+      app.init()
+    }
+  }, 10)
+})
