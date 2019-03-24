@@ -35,10 +35,7 @@
     Object.getOwnPropertyNames(css).forEach(key => {
       div.style[key] = css[key]
     })
-
     div.innerHTML = svgSpinnerMarkup
-
-    div.innerHTML = '<span style="display: block">Loading...</span>'
     document.body.appendChild(div)
     setTimeout(() => {
       div.style.opacity = '1'
