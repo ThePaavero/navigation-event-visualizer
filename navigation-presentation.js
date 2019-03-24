@@ -15,21 +15,30 @@
   const doOverlayElement = () => {
     const div = document.createElement('div')
     div.id = 'navigation-presentation-overlay'
-    div.style.position = 'fixed'
-    div.style.left = '0'
-    div.style.top = '0'
-    div.style.width = '100%'
-    div.style.height = '100%'
-    div.style.zIndex = '9999999'
-    div.style.backgroundColor = 'rgba(255, 255, 255, 0.8)'
-    div.style.pointerEvents = 'none'
-    div.style.fontFamily = 'inherit'
-    div.style.display = 'flex'
-    div.style.justifyContent = 'center'
-    div.style.alignItems = 'center'
-    div.style.transition = 'all 0.2s ease'
-    div.style.opacity = '0'
+
+    const css = {
+      position: 'fixed',
+      left: '0',
+      top: '0',
+      width: '100%',
+      height: '100%',
+      zIndex: '9999999',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      pointerEvents: 'none',
+      fontFamily: 'inherit',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      transition: 'all 0.2s ease',
+      opacity: '0',
+    }
+
+    Object.getOwnPropertyNames(css).forEach(key => {
+      div.style[key] = css[key]
+    })
+
     // div.innerHTML = svgSpinnerMarkup
+
     div.innerHTML = '<span style="display: block">Loading...</span>'
     document.body.appendChild(div)
     setTimeout(() => {
